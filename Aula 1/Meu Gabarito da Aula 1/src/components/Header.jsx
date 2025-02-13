@@ -8,7 +8,7 @@ import logoSpotify from "../assets/logo/spotify-logo.png"
 const Header = () => {
   return <div className='header'>
     <img src={logoSpotify} alt="Logo do Spotify" /> 
-    <a href="/"><h1>Spotify</h1></a>
+    <a className='header__link' href="/"><h1>Spotify</h1></a>
   </div>; // agora a gente já tem a estrutura do header
 }
 
