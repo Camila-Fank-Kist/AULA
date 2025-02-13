@@ -1,0 +1,26 @@
+/* todo navegador traz um arquivo de estilização pré pronto, então sempre fazemos o Reset, que é tirar tudo de estilização que o navegador criou */
+/*Reset:*/
+* { /* asterisco -> seletor universal -> está selecionando todo e qualquer elemento */
+  /* propriedade: valor; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* tudo no html é uma caixa, e essa caixa é representada pelo chamado box model, que é o modelo de caixa */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif; /* se achar no navegador, colocar fonte Montserrat, senão, colocar quaalquer fonte sem serifa */
+}
+
+a {
+    color: inherit; /* herda a cor que deveria herdar (do body) */
+}
+
+.header {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
