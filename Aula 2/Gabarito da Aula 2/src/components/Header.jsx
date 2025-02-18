@@ -1,5 +1,6 @@
 import React from 'react' // isso tbm é uma variável
 import logoSpotify from "../assets/logo/spotify-logo.png"
+import { Link } from 'react-router-dom';
 // Em jsx, a gente tem que importar a imagem para dentro do arquivo
 // logoSpotify é o nome que eu tô dando para a imagem que eu estou importando
 // logoSpotify é uma variável: eu tô pegando essa imagem (../assets/logo/spotify-logo.png) e jogando em logoSpotify
@@ -7,8 +8,10 @@ import logoSpotify from "../assets/logo/spotify-logo.png"
 
 const Header = () => {
   return <div className='header'>
-    <img src={logoSpotify} alt="Logo do Spotify" /> 
-    <a className='header__link' href="/"><h1>Spotify</h1></a>
+    <Link to="/">
+      <img src={logoSpotify} alt="Logo do Spotify" /> 
+    </Link>
+    <Link to="/" className='header__link' ><h1>Spotify</h1></Link>
   </div>; // agora a gente já tem a estrutura do header
 }
 

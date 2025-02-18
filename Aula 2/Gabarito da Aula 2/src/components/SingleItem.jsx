@@ -1,14 +1,15 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons' // tá adicionando o componente faCirclePlay do pacote @fortawesome/free-solid-svg-icons ?
+import { Link } from 'react-router-dom'
 
-const SingleItem = () => {
+const SingleItem = ( {id, image, name, banner, artist, idPath} ) => {
   return (
-    <div className='single-item'> {/* bloco/componente */}
+    <Link to={`${idPath}/${id}`} className='single-item'> {/* bloco/componente */}
 
       <div className='single-item__div-image-button'>
         <div className='single-item__div-image'>
-          <img className='single-item__image' src="https://i.scdn.co/image/ab676161000051744dcd8a3bff84cd7703892cf4" alt="Imagem do Artista X" />
+          <img className='single-item__image' src={image} alt={`Imagem do Artista ${name}`} />
         </div>
         {/* <FontAwesomeIcon icon="fa-solid fa-circle-play" /> */}
         <FontAwesomeIcon className='single-item__icon' icon={faCirclePlay} /> {/* assim traz outro componente: a gente importa tanto o componente FontAwesomeIcon quando o ícone, como se ele fosse uma imagem */}
@@ -16,13 +17,13 @@ const SingleItem = () => {
 
       <div className='single-item__texts'>
         <div className='single-item__2lines'>
-          <p className='single-item__title'>Henrique & Juliano teste teste teste teste teste teste</p>
+          <p className='single-item__title'>{name}</p>
         </div>
-        <p className='single-item__type'>Artista</p>
+        <p className='single-item__type'>{ artist ?? "Artista" }</p> {/* Tem artista? Se sim, usa ele mesmo, senão, mostra esse outro -> Se tiver algum valor nele, ele usa ele mesmo */}
       </div>
         
-    </div>
+    </Link>
   )
 }
 
-export default SingleItem
+export default SingleItem;
