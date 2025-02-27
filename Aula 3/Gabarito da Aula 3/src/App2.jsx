@@ -52,3 +52,10 @@ export default App2
 // O React só pode retornar 1 elemento
 
 //Componentes recebem "props", que são os parâmetros/argumentos que o componente/função tá recebendo
+
+// Quando os componentes se re-renderizam?
+// Uma das ocasiões é quando uma variável de estado usada por esse componente é atualizada
+   // (atualização em variáveis comuns não re-renderiza o componente, só atualização em variáveis de estado)
+   // Quando eu altero uma variável de estado usada por um componente, todos os lugares que usam essa variável vão re-renderizar
+   // Quando eu quero que uma variável impacte na re-renderização do meu componente, eu tenho que transformar essa variável numa variável de estado
+   // Hook - useState
