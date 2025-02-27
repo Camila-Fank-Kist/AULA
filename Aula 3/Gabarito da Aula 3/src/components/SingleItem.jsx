@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const SingleItem = ( {id, image, name, banner, artist, idPath} ) => {
   return (
-    <Link to={`${idPath}/${id}`} className='single-item'> {/* bloco/componente */}
+    <Link to={`/${idPath}/${id}`} className='single-item'> {/* bloco/componente */}
 
       <div className='single-item__div-image-button'>
         <div className='single-item__div-image'>
