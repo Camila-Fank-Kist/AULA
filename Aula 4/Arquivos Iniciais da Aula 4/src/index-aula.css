@@ -1,0 +1,63 @@
+/* todo navegador traz um arquivo de estilização pré pronto, então sempre fazemos o Reset, que é tirar tudo de estilização que o navegador criou */
+/*Reset:*/
+* { /* asterisco -> seletor universal -> está selecionando todo e qualquer elemento */
+  /* propriedade: valor; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* tudo no html é uma caixa, e essa caixa é representada pelo chamado box model, que é o modelo de caixa */
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif; /* se achar no navegador, colocar fonte Montserrat, senão, colocar quaalquer fonte sem serifa */
+}
+
+.header {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    color: inherit; /* herda a cor que deveria herdar (do body) */
+    text-decoration: none;
+}
+
+.header__link:hover {
+    text-decoration: underline;
+}
+
+.main {
+    background-color: brown;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 10px 10px;
+    /* propriedade que eu posso colocar apenas em um filho de um flex container: a propriedade "flex" */
+    flex: 1; /* para se expandir o máximo possível dentro do container pai (dentro do root) */
+    background-image: linear-gradient(to bottom, #062d14, black);
+}
+
+.main__texts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__link:hover {
+    text-decoration: underline;
+}
+
+/* fazer com que o root, que contém tudo, pegar no mínimo a altura da tela toda  */
+/* se colocar "height: 100%", ele vai pegar 100% do espaço disponível para ele, que é o espaço do elemento pai */
+/* para forçar com que ele pegue pelo menos 100% da altura da tela, usar "height: 100vh" = 100 viewboard height = 100% da altuda da tela do dispositivo */
+/* mas usamos "height: 100svh", para ele não ocupar a tela toda e considerar a barra de navegação -> ele pega o tamanho da tela menor */
+
+#root {
+    height: 100svh;
+    /* para usar a propriedade "flex" na classe "main": */
+    display: flex;
+    flex-direction: column;
+}
